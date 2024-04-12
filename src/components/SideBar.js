@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import FeedbackForm from './feedback/FeedbackForm'
-import FeedbackList from './feedback/FeedbackList'
-import FeedbackStats from './feedback/FeedbackStats'
-import { FeedbackProvider } from '../context/FeedbackContext';
+// import FeedbackForm from './feedback/FeedbackForm'
+// import FeedbackList from './feedback/FeedbackList'
+// import FeedbackStats from './feedback/FeedbackStats'
+// import { FeedbackProvider } from '../context/FeedbackContext';
 
 
 function SideBar({ showSideBar }) {
@@ -25,11 +25,6 @@ function SideBar({ showSideBar }) {
     navigate('/')
   }
 
-  const closeFeedbackForm = () => {
-    setShowFeedbackForm(false)
-    navigate('/login')
-
-  }
 
   return showSideBar ? (
     <div className='bg-primary w-60 h-screen flex flex-col'>
@@ -61,7 +56,7 @@ function SideBar({ showSideBar }) {
               </span>
               {/* {showFeedbackForm && 
               <FeedbackProvider>
-                <FeedbackForm onClose={closeFeedbackForm} />
+                <FeedbackForm  />
                 <FeedbackStats />
                 <FeedbackList />
               </FeedbackProvider>

@@ -6,8 +6,10 @@ import Header from './Header';
 import FeedbackContext from '..//../context/FeedbackContext'
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom'
 
-function FeedbackForm({ onClose }) {
+
+function FeedbackForm() {
   const [text, setText] = useState('');
   const [rating, setRating] = useState(10);
   const [btnDisabled, setBtnDisabled] = useState(true);
@@ -15,6 +17,7 @@ function FeedbackForm({ onClose }) {
   const { addFeedback, feedbackEdit, updateFeedback, setFeedbackEdit } =
     useContext(FeedbackContext);
 
+    const navigate = useNavigate()
   useEffect(() => {
     if (feedbackEdit.edit === true) {
       setBtnDisabled(false);
@@ -67,6 +70,7 @@ function FeedbackForm({ onClose }) {
       }
     }
   };
+  
 
   return (
     <div className='className={styles.container}'>
@@ -89,7 +93,6 @@ function FeedbackForm({ onClose }) {
           {message && <p className='error'>{message}</p>}
         </form>
       </Card>
-      <Button onClick={onClose}>Close</Button>
     </div>
   );
 }

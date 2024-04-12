@@ -29,17 +29,15 @@ function AddNews() {
         {
           headers: {
             Authorization: `Bearer ${token}`
-            
           }
-          
         }
-      );
+      )
     
-      console.log(response.data);
-      toast('News added successfully', 'success');
-      navigate('/home');
+      console.log(response.data)
+      toast('News added successfully', 'success')
+      navigate('/home')
     } catch (error) {
-      console.error('Error adding news item:', error);
+      console.error('Error adding news item:', error)
       toast('Something went wrong', 'error');
     } finally {
       setLoading(false);

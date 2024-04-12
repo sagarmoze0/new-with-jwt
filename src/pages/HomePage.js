@@ -55,6 +55,8 @@ console.log('item',newsItems)
     }
   };
   
+
+  
   const currentUser = JSON.parse(localStorage.getItem('user')) || {};
   console.log('user', currentUser)
   console.log('current',currentUser.data._id)
@@ -81,12 +83,23 @@ console.log('item',newsItems)
             <h1 className="text-primary text-lg font-semibold">{item.title}</h1>
             <p>{item.description}</p>
             {item.postedBy === currentUser.data._id && (
+              <>
+               <button
+               onClick={(e) => {
+                 e.stopPropagation();
+                 navigate(`/update/${item._id}`);
+               }}
+               className="bg-blue-500 text-white py-1 px-3 text-sm font-semibold rounded hover:bg-blue-700 mr-2"
+             >
+               Edit
+             </button>
               <button
                 onClick={() => handleDelete(item._id)}
                 className="bg-red-500 text-white py-1 px-3 text-sm font-semibold rounded hover:bg-red-700 mr-2"
               >
                 Delete
               </button>
+              </>
             )}
             
           </>

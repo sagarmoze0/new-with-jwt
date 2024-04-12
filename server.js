@@ -14,6 +14,6 @@ dbConnect();
 app.use('/api/newsitems/', newsRoute);
 app.use('/api/users/', userRoute);
 app.use('/api/fditems/', fdRoute);
-app.get('/', (req,res)=>res.send('hello azad'))
+app.get('/', (req,res)=>res.send('hello sagar'))
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
