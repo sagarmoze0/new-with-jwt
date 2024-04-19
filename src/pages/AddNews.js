@@ -11,6 +11,7 @@ function AddNews() {
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  // eslint-disable-next-line no-unused-vars
   const { newsItemId } = useParams();
 
   const handleSubmit = async (e) => {
