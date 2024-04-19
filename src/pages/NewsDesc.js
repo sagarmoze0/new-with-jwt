@@ -31,7 +31,7 @@ function NewsDesc() {
   useEffect(() => {
      // eslint-disable-next-line no-unused-vars
     getData()
-  }, [])
+  })
   const params = useParams()
   return (
     <Layout>

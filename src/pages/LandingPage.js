@@ -42,7 +42,7 @@ function LandingPage() {
     useEffect(() => {
         // eslint-disable-next-line no-unused-vars
       if (localStorage.getItem('user')) navigate('/home')
-    }, [])
+    })
   
 
     const register = async () => {
