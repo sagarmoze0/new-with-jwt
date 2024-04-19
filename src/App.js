@@ -4,12 +4,6 @@ import HomePage from './pages/HomePage';
 import AddNews from './pages/AddNews';
 import NewsDesc from './pages/NewsDesc';
 import LandingPage from './pages/LandingPage';
-import AboutPage from './pages/AboutPage';
-// import FeedbackForm from './components/feedback/FeedbackForm';
-// import FeedbackList from './components/feedback/FeedbackList';
-// import FeedbackStats from './components/feedback/FeedbackStats';
-// import AboutLink from './components/feedback/AboutLink';
-// import { FeedbackProvider } from './context/FeedbackContext';
 import EditNews from './pages/EditNews'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -27,15 +21,6 @@ function App() {
             <Route path='/home' element={<HomePage />} />
             <Route path='/add' element={<AddNews />} />
             <Route path='/newsdesc/:newsid' element={<NewsDesc />} />
-            {/* <Route path='/feedback' element={
-             <div > 
-                <FeedbackProvider >
-                  <FeedbackForm />
-                  <FeedbackStats />
-                  <FeedbackList />
-              </FeedbackProvider>
-              </div>
-              } /> */}
             <Route path='/update/:newsItemId' element={<EditNews />} />
           </Routes>
         </div>
