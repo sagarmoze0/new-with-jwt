@@ -38,8 +38,9 @@ function LandingPage() {
         setLoading(false)
       }
     }
-    // eslint-disable-next-line no-unused-vars
+  
     useEffect(() => {
+        // eslint-disable-next-line no-unused-vars
       if (localStorage.getItem('user')) navigate('/home')
     }, [])
   

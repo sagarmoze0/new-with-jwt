@@ -27,8 +27,9 @@ function NewsDesc() {
       setLoading(false)
     }
   }
-  // eslint-disable-next-line no-unused-vars
+ 
   useEffect(() => {
+     // eslint-disable-next-line no-unused-vars
     getData()
   }, [])
   const params = useParams()
